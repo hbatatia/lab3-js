@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Demo of Image KeyInput Image Movement </title>
+    <link rel="stylesheet" type="text/css" href="game.css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="game.js"></script>
+
+    <!--
+    Web Programming
+    2019
+    https://f20wp.github.io
+    Ben Kenwright
+    
+    Demonstrate:
+    1. user input (e.g., keys)
+    2. reset/start game
+    3. simple animation/movement
+    4. todo - game mechanics (score/gameover/playtesting, ..)
+    
+    -->
+
+    <noscript>
+        Warning - JavaScript is Disabled.
+        For full functionality of this page, it is necessary to enable JavaScript.
+    </noscript>
+    <script>
+        var myTime;
+
+        var lamb;
+        var wolf;
+
+        var lamb_place;
+        var wolf_place;
+
+        var board;
+        var boardHeight;
+        var boardWidth;
+
+
+        var X_MAX;
+        var X_MIN;
+        var Y_MIN;
+        var Y_MAX;
+
+        var Lamb_X_STEP;
+        var Lamb_Y_STEP;
+        var Wolf_X_STEP;
+        var Wolf_Y_STEP;
+
+        var Lamb_Direction;
+        var Wolf_Direction;
+
+        var Lamb_Move;
+        var Wolf_Move;
+
+
+        var KEYUP;
+        var KEYDOWN;
+        var KEYLEFT;
+        var KEYRIGHT;
+    </script>
+</head>
+
+<body onload="init();">
+
+    <div id="title">
+        <h1>Help the lamb to escape the wolf !</h1>
+        <h2> Press left and right keys for movement and up key for jump</h2>
+        <p>Lamb tries to escape the wolf by running and jumping. If the wolf catches it up, it is dead!</p>
+        <button onclick="restart();">Start</button>
+    </div>
+    <div id="scores">
+        <table>
+            <tr>
+                <td>
+                    <p><span id="wolf_place"> ... </span></p>
+                </td>
+                <td>
+                    <p><span id="lamb_place"> ... </span></p>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <div id="board">
+        <img src="./images/lamb.gif" id="lamb">
+        <img src="./images/wolf.gif" id="wolf">
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+#wolf {
+    position: absolute;
+    left: -200px;
+    /*top: 240px;*/
+    width: 100px;
+}
+
+#lamb {
+    position: absolute;
+    left: 500px;
+    /*top: 240px;*/
+}
+
+#board {
+    height: 600px;
+    width: 1500px;
+    background-color: rgb(6, 136, 119);
+    align-content: center;
+    align-self: center;
+}
+
+#title {
+    background-color: rgb(128, 128, 128);
+    align-content: center;
+    align-self: center;
+}
