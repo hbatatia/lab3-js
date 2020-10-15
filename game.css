@@ -1,4 +1,4 @@
-#wolf {
+#wolf1 {
     position: absolute;
     left: -200px;
     /*top: 240px;*/
@@ -12,8 +12,8 @@
 }
 
 #board {
-    height: 600px;
-    width: 1500px;
+    height: 500px;
+    width: 1000px;
     background-color: rgb(6, 136, 119);
     align-content: center;
     align-self: center;
@@ -23,4 +23,22 @@
     background-color: rgb(128, 128, 128);
     align-content: center;
     align-self: center;
+}
+
+#scores {
+    background-color: rgb(247, 134, 241);
+    align-content: center;
+    align-self: center;
+}
+
+.location {
+    color: green;
+}
+
+#hits {
+    color: red;
+}
+
+#duration {
+    color: blue;
 }

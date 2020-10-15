@@ -26,6 +26,7 @@
 
         var lamb_place;
         var wolf_place;
+        var hits;
 
         var board;
         var boardHeight;
@@ -42,10 +43,13 @@
         var Wolf_X_STEP;
         var Wolf_Y_STEP;
 
-        var Lamb_Direction;
-        var Wolf_Direction;
+        var X_Lamb_Direction;
+        var X_Wolf_Direction;
+        var Y_Lamb_Direction;
+        var Y_Wolf_Direction;
 
-        var Lamb_Move;
+        var Lamb_Move_X;
+        var Lamb_Move_Y;
         var Wolf_Move;
 
 
@@ -53,25 +57,35 @@
         var KEYDOWN;
         var KEYLEFT;
         var KEYRIGHT;
+
+        var startTime;
+        var duration;
     </script>
 </head>
 
 <body onload="init();">
 
     <div id="title">
-        <h1>Help the lamb to escape the wolf !</h1>
+        <h1>Help the lamb escape the wolf !</h1>
         <h2> Press left and right keys for movement and up key for jump</h2>
         <p>Lamb tries to escape the wolf by running and jumping. If the wolf catches it up, it is dead!</p>
         <button onclick="restart();">Start</button>
+        <button onclick="add();">Add wolf</button>
     </div>
     <div id="scores">
         <table>
             <tr>
                 <td>
-                    <p><span id="wolf_place"> ... </span></p>
+                    <p>Wolf@(<span id="wolf_location" class="location"> ... </span>)</p>
                 </td>
                 <td>
-                    <p><span id="lamb_place"> ... </span></p>
+                    <p>Lamb@(<span id="lamb_location" class="location"> ... </span>)</p>
+                </td>
+                <td>
+                    <p>Hits: [<span id="hits">0</span>]</p>
+                </td>
+                <td>
+                    <p>Best duration: [<span id="duration">?</span>]</p>
                 </td>
             </tr>
         </table>
@@ -79,7 +93,7 @@
     </div>
     <div id="board">
         <img src="./images/lamb.gif" id="lamb">
-        <img src="./images/wolf.gif" id="wolf">
+        <img id="wolf1" src="./images/wolf.gif" class="wolf">
 
     </div>
 </body>
